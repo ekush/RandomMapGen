@@ -16,13 +16,23 @@ public class Map
         rows = height;
         
         tiles = new Tile[columns*rows];
+        
+        CreateTiles();
     }
     
     
     //method to create the tiles
     private void CreateTiles()
     {
-        
+        var total = tiles.Length;
+
+        for (int i = 0; i < total; i++)
+        {
+            var tile = new Tile();
+            tile.id = i;
+
+            tiles[i] = tile;
+        }
     }
     
 }
